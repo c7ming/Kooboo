@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   win: circleci/windows@1.0.0
+  sonarcloud: sonarsource/sonarcloud@1.0.1
 
 jobs:
   build:
@@ -20,6 +21,7 @@ jobs:
           paths:
             - C:\Users\circleci\.nuget\packages
           key: dotnet-packages-v1-{{ checksum "circleci-demo-windows.csproj" }}
+      - sonarcloud/scan
       # - run:
           # name: "Run Build step"
           # command: dotnet.exe publish -c Release -r win10-x64
@@ -28,3 +30,9 @@ jobs:
           # command: .\bin\Release\netcoreapp2.1\win10-x64\publish\circleci-demo-windows.exe
       # - store_artifacts:
           # path: .\bin\Release\netcoreapp2.1\win10-x64\publish\circleci-demo-windows.exe
+          
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
