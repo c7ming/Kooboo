@@ -37,4 +37,3 @@ One click to deploy incremental changes to target servers. You see exactly which
 Kooboo provide an online version which works exactly the same way as local desktop version. No DNS A record, MX record setup, website go live instantly. If you register your domains somewhere else, you need to change the DNS servers to kooboo DNS servers that provided to you when you are adding your domain to Kooboo. 
 
 All A record, CNAME, Mx Record will be created for you automatically.
-test ci
