@@ -1,4 +1,4 @@
-d# Kooboo
+# Kooboo
 
 Kooboo is a new kind of web development. It saves you hours and make your website in a better way. 
 
